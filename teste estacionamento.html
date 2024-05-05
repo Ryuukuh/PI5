@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- HTML E CSS JUNTO PRA ARRUMAR DEPOIS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        /* CSS para arrumar depois pois esta bagunçado */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1px;
+            text-align: center;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .dashboard {
+            display: flex;
+            flex-wrap: wrap; /* Permite que os cards irem para proxima linha */
+            justify-content: space-between; /* Ajusta os cards igualmente na linha */
+            gap: 20px; /* Espaçamento entre os cards para não ficar tudo junto */
+        }
+        .card {
+            flex-basis: calc(20% - 10px); /*  largura dos cards para 20%  */
+            background-color: #333;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+            text-align: center;
+        }
+        .card h2 {
+            margin-top: 0;
+        }
+        .car-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .chart {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .search-bar {
+            width: 100%;
+            max-width: 500px;
+            padding: 10px;
+            border-radius: 25px;
+            border: none;
+            margin-bottom: 20px;
+            background-color: #333;
+            color: #fff;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .search-bar input[type="text"] {
+            flex: 1;
+            padding: 10px;
+            border-radius: 25px;
+            border: none;
+            background-color: #555;
+            color: #fff;
+            box-sizing: border-box;
+            margin-right: 10px; /* Espaçamento à direita para não ficar colado na barra */
+        }
+        .search-bar button {
+            padding: 10px 20px;
+            border-radius: 25px;
+            border: none;
+            background-color: #555;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .search-bar button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Controle de Estacionamento</h1>
+        <div class="search-bar">
+            <input type="text" placeholder="Pesquisar...">
+            <button>Pesquisar</button>
+        </div>
+    </header>
+    <div class="container">
+        <div class="dashboard">
+            <div class="card">
+                <h2>Vagas Totais</h2>
+                <img src="vagas_totais_livres_e_ocupadas.gif" alt="Carro" class="car-image">
+                <p>100</p>
+            </div>
+            <div class="card">
+                <h2>Vagas Ocupadas</h2>
+                <img src="ocupado.png" alt="Carro" class="car-image">
+                <p>70</p>
+            </div>
+            <div class="card">
+                <h2>Vagas Livres</h2>
+                <img src="livre.png" alt="Carro" class="car-image">
+                <p>30</p>
+            </div>
+            <div class="card">
+                <h2>Faturamento Mensal</h2>
+                <img src="dinheiro.gif" alt="Carro" class="car-image">
+                <p>R$ 50.000,00</p>
+            </div>
+            <div class="card">
+                <h2>Tempo Médio de Permanência</h2>
+                <img src="tempo.gif" alt="Carro" class="car-image">
+                <p>2 horas</p>
+            </div>
+            <div class="card">
+                <h2>Horário de Entrada e Saída</h2>
+                <img src="tempo.gif" alt="Carro" class="car-image">
+                <p>08:00 - 18:00</p>
+            </div>
+            <div class="card">
+                <h2>Placa dos Carros</h2>
+                <img src="placas.gif" alt="Carro" class="car-image">
+                <p>ABC-1234, DEF-5678, GHI-9101</p>
+            </div>
+            <div class="card">
+                <h2>Horários Movimentados</h2>
+                <img src="grafico.jpg" alt="Gráfico" class="chart">
+            </div>
+            <!-- COLOCAR MAIS CARDS SE PRECISAR -->
+        </div>
+    </div>
+</body>
+</html>
+
+
